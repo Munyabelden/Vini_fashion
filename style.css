@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.sr-hidden {
+  position: absolute;
+  visibility: hidden;
+}
+
+.navigation {
+  position: relative;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 3%;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.menu-icon  {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  background: none;
+}
+
+.menu-icon div {
+  border: none;
+  background: #000;
+  width: 20px;
+  height: 2px;
+  -o-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.menu-icon div:nth-child(1) {
+  width: 25px;
+}
+
+.menu-icon div:nth-child(2) {
+  margin-block: 7.5px;
+}
+
+.menu-icon :nth-child(3)  {
+  width: 15px;
+}
+
+.menu-letters {
+  margin-left: 5px;
+  margin-top: -3px;
+  font-size: 18px;
+}
+
+.primary-navigation {
+  display: none;
+}
+
+.logo {
+  position: absolute;
+  background: rgb(13, 12, 12);
+  top: 0;
+  left: 35%;
+  padding-block: 20px;
+  padding-inline: 20px;
+  color: #fff;
+  text-align: center;
+  z-index: 10;
+}
+
+.logo h1{
+  font-size: 26px;
+  margin-bottom: 0;
+}
+
+.logo span {
+  margin-top: 0;
+  font-weight: 100;
+  font-size: 14px;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-media li a {
+  color: #000;
+  font-size: 32px;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.carousel::after {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: -100;
+  background: #000;
+  height: 100vh;
+  width: 100vw;
+  top: 45vh;
+  left: -5rem;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+  position: absolute;
+  background: rgb(208, 165, 91);
+  width: 60px;
+  height: 70px;
+  top: 40vh;
+  z-index: 10;
+}
+
+.carousel-item {
+  height: 85vh;
+  margin: 0 auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.carousel-item div p {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.item-1 {
+  background-image: url('./assets/blue-suit.jpg');
+}
+
+.item-2 {
+  background-image: url('./assets/women-african.jpg');
+  background-position: bottom;
+}
+
+.item-3 {
+  background-image: url('./assets/joyful-woman.jpg');
+}
