@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 li {
   list-style: none;
 }
@@ -77,9 +81,9 @@ a {
 
 .logo {
   position: absolute;
-  background: rgb(13, 12, 12);
+  background: #000;
   top: 0;
-  left: 35%;
+  left: 40%;
   padding-block: 20px;
   padding-inline: 20px;
   color: #fff;
@@ -148,9 +152,21 @@ a {
   background-repeat: no-repeat;
 }
 
+.carousel-item {
+  padding-top: 24.5rem;
+  padding-bottom: 0;
+}
+
+.carousel-item div {
+  height: 30vh;
+  padding-inline: 20px;
+  padding-block: 6rem 0;
+  background: linear-gradient(to bottom, transparent, #000);
+}
+
 .carousel-item div p {
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 600;
 }
 
@@ -165,4 +181,118 @@ a {
 
 .item-3 {
   background-image: url('./assets/joyful-woman.jpg');
+}
+
+main {
+  background: #000;
+  padding-block: 100px;
+}
+
+.work-columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding-inline: 5%;
+  color: #fff;
+  margin-block: 150px 100px;
+  gap: 20px;
+}
+
+.column {
+  padding: 15px;
+  border: 2px solid rgb(170, 133, 69);
+}
+
+.column h3 {
+ color: rgb(170, 133, 69);
+}
+
+.history {
+  display: block;
+  flex-direction: column;
+  padding-inline: 5%;
+  color: #fff;
+}
+
+.history h2 {
+  color: rgb(170, 133, 69);
+  margin-bottom: 50px;
+  font-size: 42px;
+}
+
+.history-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-block: 0 40px;
+}
+
+.history-details p {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(170, 133, 69);
+  height: 100%;
+  padding: 50px 60px;
+  height: 400px;
+  font-size: 18px;
+  z-index: 10;
+}
+
+.history-details img {
+  justify-self: flex-end;
+  width: 550px;
+  height: 350px;
+  margin-left: -40px;
+}
+
+.gallery {
+  padding: 5%;
+}
+
+.gallery-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.gallery-images img {
+  width: 30%;
+}
+
+.meetings {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  background-image: url('./assets/suits.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 90%;
+  margin: 80px auto;
+}
+
+.meetings div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  height: 100%;
+  width: 100%;
+}
+
+.meetings div a {
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: center;
+  text-transform: uppercase;
 }
