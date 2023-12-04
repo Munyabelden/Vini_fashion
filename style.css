@@ -4,6 +4,10 @@
   margin: 0;
 }
 
+:root {
+  --primary-background: rgb(11, 42, 44);
+}
+
 body {
   overflow-x: hidden;
 }
@@ -47,7 +51,7 @@ a {
 
 .menu-icon div {
   border: none;
-  background: #000;
+  background: var(--primary-background);
   width: 20px;
   height: 2px;
   -o-border-radius: 3px;
@@ -81,12 +85,12 @@ a {
 
 .logo {
   position: absolute;
-  background: #000;
+  background: var(--primary-background);
   top: 0;
   left: 40%;
   padding-block: 20px;
   padding-inline: 20px;
-  color: #fff;
+  color: rgb(250, 233, 206);
   text-align: center;
   z-index: 10;
 }
@@ -110,7 +114,7 @@ a {
 }
 
 .social-media li a {
-  color: #000;
+  color: var(--primary-background);
   font-size: 32px;
 }
 
@@ -128,7 +132,7 @@ a {
   display: block;
   position: absolute;
   z-index: -100;
-  background: #000;
+  background: var(--primary-background);
   height: 100vh;
   width: 100vw;
   top: 45vh;
@@ -161,7 +165,7 @@ a {
   height: 30vh;
   padding-inline: 20px;
   padding-block: 6rem 0;
-  background: linear-gradient(to bottom, transparent, #000);
+  background: linear-gradient(to bottom, transparent, var(--primary-background));
 }
 
 .carousel-item div p {
@@ -184,8 +188,8 @@ a {
 }
 
 main {
-  background: #000;
-  padding-block: 100px;
+  background: var(--primary-background);
+  padding-block: 100px 40px;
 }
 
 .work-columns {
@@ -284,7 +288,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(11, 42, 44, 0.8);
   height: 100%;
   width: 100%;
 }
@@ -295,4 +299,98 @@ main {
   cursor: pointer;
   align-self: center;
   text-transform: uppercase;
+}
+
+.meetings::after {
+  content: '';
+  display: block;
+  position: absolute;
+  background: #727272;
+  height: 1px;
+  width: 90%;
+  margin-top: 480px;
+  margin-inline: auto;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  background: var(--primary-background);
+  margin: 0;
+  padding-inline: 5%;
+  padding-block:20px 40px;
+}
+
+footer .primary-location{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./assets/map.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 400px;
+  height: 400px;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.primary-location h4,
+.primary-location span {
+  color: #dedede;
+}
+
+.primary-location span {
+  font-size: 19px;
+  font-weight: 100;
+  letter-spacing: 1px;
+  margin-top: 5px;
+}
+
+.primary-location a {
+  color: rgb(216, 173, 100);
+  text-decoration: underline;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.location i {
+  font-size: 36px;
+  color: rgb(140, 112, 63);
+  margin-top: 20px;
+}
+
+.primary-location div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background: radial-gradient(circle, rgba(11, 42, 44, 0.7), var(--primary-background));
+  height: 100%;
+  -o-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+}
+
+.email {
+  text-decoration: underline;
+}
+
+.copyright {
+  color: #dedede;
+}
+
+.copyright h3 {
+  color: rgb(27, 80, 84);
+  font-weight: 800;
+  font-size: 64px;
 }
