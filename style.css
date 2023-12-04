@@ -150,14 +150,14 @@ a {
 }
 
 .carousel-item {
-  height: 85vh;
+  height: 90vh;
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
 }
 
 .carousel-item {
-  padding-top: 23.5rem;
+  padding-top: 24.5rem;
   padding-bottom: 0;
 }
 
