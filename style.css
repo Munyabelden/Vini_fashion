@@ -168,6 +168,18 @@ a {
   background: linear-gradient(to bottom, transparent, var(--primary-background));
 }
 
+.carousel-item div::after {
+  content: '';
+  display: block;
+  position: relative;
+  z-index: -1;
+  margin-top: 25px;
+  background: var(--primary-background);
+  height: 50vh;
+  width: 100vw;
+  left: -5rem
+}
+
 .carousel-item div p {
   color: #fff;
   font-size: 30px;
