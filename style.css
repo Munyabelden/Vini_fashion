@@ -219,10 +219,12 @@ main {
 .column {
   padding: 15px;
   border: 2px solid rgb(170, 133, 69);
+  height: 250px;
 }
 
 .column h3 {
  color: rgb(170, 133, 69);
+ font-size: 26px;
 }
 
 .history {
