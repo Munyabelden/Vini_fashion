@@ -47,9 +47,10 @@ a {
   flex-direction: column;
   border: none;
   background: none;
+  z-index: 1000;
 }
 
-.menu-icon div {
+.menu-icon .bar {
   border: none;
   background: var(--primary-background);
   width: 20px;
@@ -59,6 +60,10 @@ a {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   border-radius: 3px;
+}
+
+.menu-icon .bar.bright {
+  background: #fff;
 }
 
 .menu-icon div:nth-child(1) {
@@ -80,7 +85,41 @@ a {
 }
 
 .primary-navigation {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 20px;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  background: var(--primary-background);
+  z-index: 100;
+  width: 40%;
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+
+.primary-navigation.render-links {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+}
+
+.primary-navigation a {
+  font-size: 24px;
+  color: #dedede;
 }
 
 .logo {
@@ -166,7 +205,7 @@ a {
   padding-inline: 20px;
   padding-block: 6rem 0;
   background: linear-gradient(to bottom, transparent, var(--primary-background));
-  border-bottom: 60px solid var(--primary-background);
+  border-bottom: 50px solid var(--primary-background);
 }
 
 .carousel-item div::after {
@@ -213,7 +252,7 @@ main {
   width: 100%;
   padding-inline: 5%;
   color: #fff;
-  margin-block: 150px 100px;
+  margin-block: 120px 100px;
   gap: 20px;
 }
 
