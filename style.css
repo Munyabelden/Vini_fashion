@@ -173,12 +173,12 @@ a {
   display: block;
   position: relative;
   z-index: -1;
-  margin-top: 25px;
+  margin-top: 30px;
   background: var(--primary-background);
   height: 50vh;
   width: 100vw;
   left: -5rem
-}
+} 
 
 .carousel-item div p {
   color: #fff;
