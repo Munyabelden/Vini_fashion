@@ -196,7 +196,7 @@ a {
 }
 
 .carousel-item {
-  padding-top: 24rem;
+  padding-top: 24.2rem;
   padding-bottom: 0;
 }
 
@@ -447,4 +447,42 @@ footer .primary-location{
   color: rgb(27, 80, 84);
   font-weight: 800;
   font-size: 64px;
+}
+
+/* About us in about.html */
+
+.about-body {
+  background: rgb(235, 241, 241);
+}
+
+.about-us {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  margin-top: 30px;
+}
+
+.about-us h2 {
+  color: rgb(170, 133, 69);
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.about-us img {
+  width: 50%;
+}
+
+.about-us div {
+  padding: 20px 60px;
+}
+
+.about-us div .first-child {
+  font-weight: 400;
+}
+
+.about-us div p {
+  font-size: 17px;
+  margin-block: 25px;
+  font-weight: 300;
 }
