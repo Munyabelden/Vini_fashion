@@ -1,55 +1,52 @@
 <?php
 
-//Add your information here
-$recipient = "munyaradzi045@gmail.com";
+// Add your information here
+$to = "munyaradzi045@gmail.com";
 
-//Don't edit anything below this line
+// Don't edit anything below this line
 
-//import form information
-$name = $_POST['name'];
-$email = $_POST['email'];
-$phone = $_POST['phone'];
-$message = $_POST['message'];
+// Import form information
+$name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
+$email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
+$phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : '';
+$message = isset($_POST['message']) ? htmlspecialchars($_POST['message']) : '';
 
+$message = "Name: $name, Phone: $phone\n\nMessage: $message";
 
-$name=stripslashes($name);
-$email=stripslashes($email);
-$phone=stripslashes($phone);
-$message=stripslashes($message);
-$message= "Name: $name, Phone: $phone \n\n Message: $message";
+$errors = [];
 
-/*
-Simple form validation
-check to see if an email and message were entered
-*/
-
-//if no message entered and no email entered print an error
-if (empty($message) && empty($email)){
-print "No email address and no message was entered. <br>Please include an email and a message";
-}
-//if no message entered send print an error
-elseif (empty($message)){
-print "No message was entered.<br>Please include a message.<br>";
-}
-//if no email entered send print an error
-elseif (empty($email)){
-print "No email address was entered.<br>Please include your email. <br>";
+// Simple form validation
+if (empty($message)) {
+    $errors[] = "No message was entered. Please include a message.";
 }
 
+if (empty($email)) {
+    $errors[] = "No email address was entered. Please include your email.";
+} elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = "Invalid email format. Please enter a valid email address.";
+}
 
-//mail the form contents
-if(mail("$recipient", "$phone", "$message", "From: $email" )) {
+// Mail the form contents
+if (empty($errors)) {
+    $headers = "From: $email";
 
-	// Email has sent successfully, echo a success page.
-
-	echo '<div class="alert alert-success alert-dismissable fade in">
-		<button type = "button" class = "close" data-dismiss = "alert" aria-hidden = "true">&times;</button>
-    
-		<p>Email Sent Successfully! We Will get back to you shortly</p></div>';
-
-	} else {
-
-	echo 'ERROR!';
-
-	}
-
+    if (mail($to, $phone, $message, $headers)) {
+        echo '<div class="alert alert-success alert-dismissable fade in">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <p>Email Sent Successfully! We will get back to you shortly.</p>
+        </div>';
+    } else {
+        echo '<div class="alert alert-danger alert-dismissable fade in">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <p>There was an error sending the email. Please try again later.</p>
+        </div>';
+    }
+} else {
+    foreach ($errors as $error) {
+        echo '<div class="alert alert-danger alert-dismissable fade in">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <p>' . $error . '</p>
+        </div>';
+    }
+}
+?>
