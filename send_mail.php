@@ -1,7 +1,7 @@
 <?php
 
 //Add your information here
-$recipient = "lespakhydraulics@gmail.com";
+$recipient = "munyaradzi045@gmail.com";
 
 //Don't edit anything below this line
 
