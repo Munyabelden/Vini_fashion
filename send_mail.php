@@ -1,11 +1,7 @@
 <?php
 
-// Add your information here
 $to = "munyaradzi045@gmail.com";
 
-// Don't edit anything below this line
-
-// Import form information
 $name = isset($_POST['name']) ? htmlspecialchars($_POST['name']) : '';
 $email = isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '';
 $phone = isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : '';

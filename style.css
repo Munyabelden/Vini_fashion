@@ -10,6 +10,7 @@
 
 body {
   overflow-x: hidden;
+  border: 1px solid red;
 }
 
 li {
@@ -24,6 +25,8 @@ a {
   position: absolute;
   visibility: hidden;
 }
+
+/* Header Navigation Styles */
 
 .navigation {
   position: relative;
@@ -126,7 +129,7 @@ a {
   position: absolute;
   background: var(--primary-background);
   top: 0;
-  left: 40%;
+  right: 40%;
   padding-block: 20px;
   padding-inline: 20px;
   color: rgb(250, 233, 206);
@@ -156,6 +159,26 @@ a {
   color: var(--primary-background);
   font-size: 32px;
 }
+
+/* Header Navigation mobile Styles */
+
+@media (max-width: 800px) {
+  .logo {
+    width: 100%;
+    left: 0;
+    top: 65px;
+  }
+
+  .navigation {
+    padding-top: 5px;
+  }
+
+  .primary-navigation {
+    width: 90%;
+  }
+}
+
+/* Header Carousel Styles */
 
 .carousel {
   display: flex;
@@ -224,6 +247,7 @@ a {
   color: #fff;
   font-size: 30px;
   font-weight: 600;
+  z-index: 10;
 }
 
 .item-1 {
@@ -239,9 +263,19 @@ a {
   background-image: url('./assets/joyful-woman.jpg');
 }
 
+/* Header Carousel Mobile Styles */
+
+@media (max-width: 800px) {
+  .carousel {
+    width: 100%;
+    margin-top: 100px;
+  }
+}
+
 main {
   background: var(--primary-background);
   padding-block: 100px 40px;
+  z-index: 1;
 }
 
 .work-columns {
@@ -366,6 +400,36 @@ main {
   margin-inline: auto;
 }
 
+/* Main Styles on Mobile */
+
+@media (max-width: 800px) {
+  .work-columns {
+    flex-direction: column;
+  }
+
+  .column {
+    height: auto;
+  }
+
+  .history-details {
+    flex-direction: column;
+  }
+
+  .history-details p {
+    height: auto;
+    padding-inline: 15px;
+  }
+
+  .history-details img {
+    width: 100%;
+    object-fit:cover;
+    margin-left: 0;
+    margin-top: -25px;
+  }
+}
+
+/* Footer Styles */
+
 footer {
   display: flex;
   flex-direction: row;
@@ -437,6 +501,7 @@ footer .primary-location{
 
 .email {
   text-decoration: underline;
+  font-size: 15px;
 }
 
 .copyright {
@@ -447,6 +512,33 @@ footer .primary-location{
   color: rgb(27, 80, 84);
   font-weight: 800;
   font-size: 64px;
+}
+
+
+/* Footer style on mobile */
+
+@media (max-width: 800px) {
+  footer {
+    flex-direction: column;
+    padding-top: 40px;
+  }
+
+  footer .primary-location {
+    width: 300px;
+    height: 300px;
+  }
+
+  .primary-location div {
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+  .email {
+    display: none;
+  }
 }
 
 /* About us in about.html */
@@ -487,6 +579,23 @@ footer .primary-location{
   font-weight: 300;
 }
 
+/* About Mobile Styles */
+
+@media (max-width: 900px) {
+  .about-us {
+    flex-direction: column;
+  }
+
+  .about-us img {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .about-us div {
+    padding-inline: 4%
+  }
+}
+
 /* Contacts page css */
 
 .contact-body {
@@ -499,7 +608,7 @@ footer .primary-location{
   position: absolute;
   top: 50vh;
   left: 0;
-  height: 200vh;
+  height: 150vh;
   width: 100%;
   background: var(--primary-background);
   z-index: -1;
@@ -519,6 +628,7 @@ footer .primary-location{
   align-items: center;
   background-image: url('./assets/met.jpg');
   background-size: cover;
+  background-position: center;
   height: 60vh;
   width: 90%;
   text-align: center;
@@ -569,5 +679,28 @@ footer .primary-location{
 }
 
 .submit-btn {
-  
+  color: #dedede;
+  background: rgb(208, 165, 91);
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+  -webkit-transition: all 300ms ease-in-out;
+  -moz-transition: all 300ms ease-in-out;
+  -ms-transition: all 300ms ease-in-out;
+  -o-transition: all 300ms ease-in-out;
+}
+
+.submit-btn:hover {
+  font-size: 17px;
+}
+
+@media (max-width: 700px) {
+  .contact-header {
+     margin-top: 50px;
+  }
+
+  .form div {
+    width: 90%;
+  }
 }
