@@ -20,7 +20,7 @@
 
 # 📖 [Belden Portfolio] <a name="about-project"></a>
 
-**[Belden Portfolio]** is a meticulously crafted online platform that encapsulates a wealth of information about a tailor salon, presenting a comprehensive overview of their services, achievements, and experiences. As you step into this digital realm, you'll find an elegantly designed hub that offers a deep dive into VENI's professional journey and personal accomplishments.
+**[Veni Vidi Vici]** is a meticulously crafted online platform that encapsulates a wealth of information about a tailor salon, presenting a comprehensive overview of their services, achievements, and experiences. As you step into this digital realm, you'll find an elegantly designed hub that offers a deep dive into VENI's professional journey and personal accomplishments.
 
 ## 🛠 Built With <a name="built-with"></a>
 
